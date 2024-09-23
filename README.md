@@ -40,7 +40,7 @@ La solución consistirá en implementar un proceso de limpieza y procesamiento d
 
 ### ¿Cuántos videojuegos tienen información incompleta o nula en términos de ventas o puntuaciones?
 La función `isnull()` busca los valores nulos. La aplicamos inicialmente para la limpieza de datos, y nos muestra la cantidad de datos nulos en cada columna. 🔍
-![1](https://github.com/LunaLBR/Videogames_analysis_with_python/imagenes/imagen1.png)
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/imagenes/1.png)
 **Resultados:**
 
 El resultado de la ejecución fue variado. En ventas, no tenemos valores nulos, por lo tanto, no se modificará. En el caso de las puntuaciones, obtuvimos bastantes valores `NaN`. Nuestra solución fue llenar estos datos nulos con `fillna()`, reemplazando los valores de las puntuaciones con valores generados aleatoriamente en base al promedio de los datos de la columna correspondiente. ⚙️
