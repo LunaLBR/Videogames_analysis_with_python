@@ -45,6 +45,8 @@ La función `isnull()` busca los valores nulos. La aplicamos inicialmente para l
 
 **Resultados:**
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/2.png)
+
 El resultado de la ejecución fue variado. En ventas, no tenemos valores nulos, por lo tanto, no se modificará. En el caso de las puntuaciones, obtuvimos bastantes valores `NaN`. Nuestra solución fue llenar estos datos nulos con `fillna()`, reemplazando los valores de las puntuaciones con valores generados aleatoriamente en base al promedio de los datos de la columna correspondiente. ⚙️
 
 ### ¿Cuál es el rango de ventas en las diferentes regiones (Norteamérica, Europa, Japón)?
@@ -52,13 +54,22 @@ El código calcula el rango de ventas de videojuegos en distintas regiones (Nort
 
 **Por Región:**
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/3.png)
+
 **Global:**
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/4.png)
 
 Se utilizó la función `.max()` para encontrar el valor máximo de ventas y la función `.min()` para el valor mínimo. La diferencia entre estos dos valores se almacenó en variables específicas para cada región.
 
 **Resultados:**
 - **Por Región:**
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/5.png)
+
 - **Global:**
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/6.png)
 
 Estos resultados indican que hay variaciones significativas en las ventas de videojuegos entre las diferentes regiones. 🌍 La cobertura de ventas en Norteamérica y Europa es particularmente alta en comparación con otras regiones, lo que indica que estas son regiones clave en el mercado de los videojuegos. 
 
@@ -67,7 +78,12 @@ Las ventas globales de **82,52 millones** demuestran el potencial y la diversida
 ## ¿Qué plataformas generan mayores ventas globales?
 Para agrupar los datos de ventas por plataforma se utilizó `groupby()`, además de `sum()` para obtener el total de ventas globales. Posteriormente, se utilizó `sort_values(ascending=False)` para ordenar las plataformas de mayor a menor según lo anterior. 📊
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/7.png)
+
 **Resultados:**
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/8.png)
+
 - **PlayStation 2** es la consola con mayores ingresos globales en la historia de los videojuegos, seguida de **Xbox 360** y **PlayStation 3**.
 - Las consolas de **Nintendo**, como **Nintendo Wii** y **Nintendo DS**, también se encuentran entre las consolas más vendidas, lo que demuestra su fuerte presencia en el mercado. 🎮
 
