@@ -1,6 +1,6 @@
 # PROYECTO “Video Game Sales and Ratings con Python” 🎮
 
-##INTEGRANTES, EQUIPO 30: 
+INTEGRANTES, EQUIPO 30: 
 - ⭐ Luna Bela Dangú Hernández - lbdan19@gmail.com
 - ⭐ Laura Berenice Luna Reyes - lauralunr@gmail.com
 - ⭐ Carolina Chi Arceo - carochiar@gmail.com
