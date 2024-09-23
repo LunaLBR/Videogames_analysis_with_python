@@ -144,7 +144,7 @@ Se filtran las columnas relevantes para el análisis, seleccionando el año de l
 **Resultados:**
 - Los datos muestran que algunos años, como **2006** y **1985**, tuvieron ventas significativamente más altas que otros. 📅
 
-![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/1.png)
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/19.png)
 
 ## 8. Consideraciones futuras
 Una vez que los datos estén procesados y limpios, será posible realizar un análisis más profundo. Por ejemplo, se podrían explorar correlaciones avanzadas entre las puntuaciones de los críticos y las ventas globales. Además, este proyecto podría servir como base para crear modelos predictivos que anticipen el éxito comercial de futuros videojuegos basándose en sus características clave. También podría ser interesante analizar el impacto de factores externos como campañas de marketing o lanzamientos simultáneos de consolas. 📈
