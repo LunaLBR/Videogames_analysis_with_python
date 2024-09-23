@@ -1,9 +1,9 @@
 # PROYECTO “Video Game Sales and Ratings con Python” 🎮
 
-#INTEGRANTES, EQUIPO 30:
-Luna Bela Dangú Hernández - lbdan19@gmail.com
-Laura Berenice Luna Reyes - lauralunr@gmail.com
-Carolina Chi Arceo - carochiar@gmail.com
+##INTEGRANTES, EQUIPO 30: 
+- ⭐ Luna Bela Dangú Hernández - lbdan19@gmail.com
+- ⭐ Laura Berenice Luna Reyes - lauralunr@gmail.com
+- ⭐ Carolina Chi Arceo - carochiar@gmail.com
 
 ## 1. Introducción
 Los videojuegos son una de las formas más populares de entretenimiento a nivel mundial. 🌍 El éxito de un juego depende de diversos aspectos como la plataforma en la que se juega, su género, las opiniones de los críticos y usuarios, así como las ventas en distintas regiones. A veces no es fácil ver las conexiones entre los datos, pero al analizarlos es posible encontrar patrones que puedan explicar por qué algunos videojuegos tienen más éxito que otros en el mercado. Este proyecto analiza datos mundiales de videojuegos para estudiar cómo la plataforma, el género y las calificaciones influyen en las ventas a nivel global y regional.
