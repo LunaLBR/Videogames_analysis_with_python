@@ -90,13 +90,35 @@ Para agrupar los datos de ventas por plataforma se utilizó `groupby()`, además
 ## ¿Qué géneros de videojuegos son los que mayor se venden?
 Se realizó un análisis de las ventas globales totales de cada género de videojuego. Se agruparon los datos por género y luego se sumaron las ventas globales para cada uno de ellos. 🏆
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/9.png)
+
 **Resultados:**
 - Los géneros más vendidos son **Action** (1,771.73 millones), **Sports** (1,350.61 millones) y **Shooter** (1,086.67 millones), destacando la popularidad de los juegos dinámicos y competitivos a nivel mundial.
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/10.png)
+
 ## ¿Cuál es la distribución de los videojuegos por género y plataforma?
-Se realizó un análisis de cómo se agrupan los videojuegos según su género y plataforma. Iniciamos cuantificando los videojuegos según su tipo, luego por plataforma, y posteriormente ambos (género y plataforma). Finalmente, se ordenaron con el top 10 de los más relevantes. 📈
+Se realizó un análisis de cómo se agrupan los videojuegos según su género y plataforma. Iniciamos cuantificando los videojuegos según su tipo.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/11.png)
+
+Luego por plataforma
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/12.png)
+
+Posteriormente ambos (género y plataforma). 
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/13.png)
+
+Finalmente, se ordenaron con el top 10 de los más relevantes. 📈
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/14.png)
+
 
 **Resultados:**
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/15.png)
+
 - Los resultados muestran que **Action** (3,410), **Sports** (2,380), y **Misc** (1,773) son los géneros con más videojuegos.
 - En términos de plataformas, las más populares son **PlayStation 2** (2,188), **Nintendo DS** (2,164), y **PlayStation 3** (1,359).
 - Al combinar género y plataforma, se observa que **Sports** en **PlayStation 2** tiene la mayor cantidad de videojuegos (402), seguido de **Misc** en **Nintendo DS** (392) y **Action** en **PlayStation 3** (383).
@@ -104,7 +126,11 @@ Se realizó un análisis de cómo se agrupan los videojuegos según su género y
 ## ¿Qué relación existe entre las puntuaciones de críticos y usuarios y las ventas globales?
 Primero se filtraron las columnas relevantes para el análisis, seleccionando el nombre del juego, las puntuaciones de críticos y usuarios, y las ventas globales. Luego, los juegos se ordenan en forma descendente según las puntuaciones más altas usando la función `sort_values()`. Finalmente, se imprimen los 10 juegos mejor calificados para observar si existe una relación entre las altas puntuaciones y las mayores ventas. 
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/16.png)
+
 Se utiliza la función **tail()** para mostrar los últimos 10 juegos con las peores calificaciones. A pesar de las puntuaciones muy bajas de críticos y usuarios, estos juegos registran algunas ventas, aunque considerablemente menores.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/17.png)
 
 **Resultados:**
 - Juegos como **Grand Theft Auto V** y **Super Mario Galaxy** tienen calificaciones excelentes de críticos (97) y usuarios, con ventas que superan los 10 millones de copias, mostrando una relación positiva en estos casos.
@@ -113,8 +139,12 @@ Se utiliza la función **tail()** para mostrar los últimos 10 juegos con las pe
 ## ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho?
 Se filtran las columnas relevantes para el análisis, seleccionando el año de lanzamiento y las ventas globales. Luego, se ordenan los datos de forma descendente utilizando `sort_values()`. Finalmente, se muestran los 10 años con mayores ventas.
 
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/18.png)
+
 **Resultados:**
 - Los datos muestran que algunos años, como **2006** y **1985**, tuvieron ventas significativamente más altas que otros. 📅
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/1.png)
 
 ## 8. Consideraciones futuras
 Una vez que los datos estén procesados y limpios, será posible realizar un análisis más profundo. Por ejemplo, se podrían explorar correlaciones avanzadas entre las puntuaciones de los críticos y las ventas globales. Además, este proyecto podría servir como base para crear modelos predictivos que anticipen el éxito comercial de futuros videojuegos basándose en sus características clave. También podría ser interesante analizar el impacto de factores externos como campañas de marketing o lanzamientos simultáneos de consolas. 📈
