@@ -123,8 +123,8 @@ Finalmente, se ordenaron con el top 10 de los más relevantes. 📈
 - En términos de plataformas, las más populares son **PlayStation 2** (2,188), **Nintendo DS** (2,164), y **PlayStation 3** (1,359).
 - Al combinar género y plataforma, se observa que **Sports** en **PlayStation 2** tiene la mayor cantidad de videojuegos (402), seguido de **Misc** en **Nintendo DS** (392) y **Action** en **PlayStation 3** (383).
 
-## ¿Qué relación existe entre las puntuaciones de críticos y usuarios y las ventas globales?
-# 🎮 Elaboramos un Pairplot de las Columnas de Interés de Ventas y Scores 📊
+# ¿Qué relación existe entre las puntuaciones de críticos y usuarios y las ventas globales?
+### 🎮 Elaboramos un Pairplot de las Columnas de Interés de Ventas y Scores 📊
 
 ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/pairplot.png)
 
@@ -153,23 +153,23 @@ A continuación, generamos una **matriz de correlación** para ver las relacione
 
 ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/heatmap.png)
 
-## 🌍 Ventas por Región  
+### 🌍 Ventas por Región  
 - Vemos una **posible correlación positiva** entre las **ventas en diferentes regiones** (NA, EU, JP, etc.) y las **ventas globales**.  
   - Esto nos sugiere que, si un juego **vende bien en una región**, es probable que **también lo haga en otras**.
 
 ---
 
-## 🎯 Puntuaciones y Ventas  
+### 🎯 Puntuaciones y Ventas  
 - Observamos una **correlación positiva** entre las **puntuaciones de críticos y usuarios** y las **ventas globales**.  
   - Sin embargo, esta relación es **más débil** que la **correlación entre las ventas regionales**.
 
 ---
 
-## 📝 Correlación entre `critic_score` y `user_score`  
+### 📝 Correlación entre `critic_score` y `user_score`  
 - Existe una **correlación positiva** entre las puntuaciones de **críticos y usuarios**.  
   - Esto tiene **sentido**, ya que si un juego es **bueno**, es probable que reciba **buenas reseñas** tanto por parte de **críticos** como de **usuarios**. 🎮✨
 
-## 📈 Scatterplot de las Columnas de Interés  
+### 📈 Scatterplot de las Columnas de Interés  
 
 El gráfico de Puntuación de criticos y usuarios muestra un comportamiento esperado, a medidad que aumentan las puntuaciónes de los criticos aumentan las ventas globales:
 
@@ -206,7 +206,7 @@ El **valor de R² promedio** obtenido nos indica que nuestras **variables predic
 ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/crossvalidate.png)
 
 
-## 🔍 **Interpretación**  
+### 🔍 **Interpretación**  
 - Esto sugiere que las **puntuaciones de críticos y usuarios**, por sí solas, **no son suficientes** para explicar de manera significativa las **ventas globales** de los videojuegos.  
 - Es probable que **otras variables importantes** influyan de manera significativa en el éxito comercial, como:
 
@@ -217,18 +217,8 @@ El **valor de R² promedio** obtenido nos indica que nuestras **variables predic
 
 ---
 
-### 🧠 **Conclusión**  
+### 🧠 **Resultados**  
 Aunque las puntuaciones pueden tener cierta **influencia**, es claro que no son los únicos factores que determinan las ventas globales. Un análisis más profundo que considere estas **variables adicionales** podría mejorar la capacidad de **predicción** del modelo y brindar una comprensión más completa de los **factores que impulsan las ventas** en la industria de los videojuegos. 🚀📊  
-
-
----
-
-### 🔄 **Visión Completa del Éxito Comercial de los Videojuegos**  
-Al comparar estos datos con **otras fuentes de información** y analizar las **tendencias a lo largo del tiempo**, podemos obtener una **perspectiva más completa** sobre los factores que **influyen en el éxito comercial** de los videojuegos. 🚀  
-
-
-**Resultados:**
-
 
 ## ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho?
 Se filtran las columnas relevantes para el análisis, seleccionando el año de lanzamiento y las ventas globales. Luego, se ordenan los datos de forma descendente utilizando `sort_values()`. Finalmente, se muestran los 10 años con mayores ventas.
