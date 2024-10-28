@@ -124,17 +124,111 @@ Finalmente, se ordenaron con el top 10 de los más relevantes. 📈
 - Al combinar género y plataforma, se observa que **Sports** en **PlayStation 2** tiene la mayor cantidad de videojuegos (402), seguido de **Misc** en **Nintendo DS** (392) y **Action** en **PlayStation 3** (383).
 
 ## ¿Qué relación existe entre las puntuaciones de críticos y usuarios y las ventas globales?
-Primero se filtraron las columnas relevantes para el análisis, seleccionando el nombre del juego, las puntuaciones de críticos y usuarios, y las ventas globales. Luego, los juegos se ordenan en forma descendente según las puntuaciones más altas usando la función `sort_values()`. Finalmente, se imprimen los 10 juegos mejor calificados para observar si existe una relación entre las altas puntuaciones y las mayores ventas. 
+# 🎮 Elaboramos un Pairplot de las Columnas de Interés de Ventas y Scores 📊
 
-![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/16.png)
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/pairplot.png)
 
-Se utiliza la función **tail()** para mostrar los últimos 10 juegos con las peores calificaciones. A pesar de las puntuaciones muy bajas de críticos y usuarios, estos juegos registran algunas ventas, aunque considerablemente menores.
+- **Posible correlación positiva** entre las **ventas en diferentes regiones** (NA, EU, JP, etc.) y las **ventas globales**.  
+  - Esto sugiere que, si un juego vende bien en una región, es probable que **también lo haga en otras**. 🌎
 
-![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/17.png)
+- **Leve correlación positiva** entre las **puntuaciones de críticos y usuarios** y las **ventas globales**.  
+  - Esta relación es un poco **más débil** en comparación con la correlación entre las **ventas regionales**.
+
+- **Correlación positiva entre `critic_score` y `user_score`**.  
+  - Esto tiene **sentido**, ya que si un juego es **bueno**, es probable que reciba **buenas reseñas** tanto de **críticos** como de **usuarios**. 🎮✨
+  - 
+### **Columnas Numéricas Seleccionadas**  
+Elegimos las siguientes columnas numéricas de interés:  
+- `'na_sales'
+- `'eu_sales'
+- `'jp_sales'  
+- `'other_sales'
+- `'global_sales'
+- `'critic_score' 
+- `'user_score' 
+
+---
+### 📊 **Generación de Matriz de Correlación y Heatmap**  
+A continuación, generamos una **matriz de correlación** para ver las relaciones entre las diferentes variables. Luego, la representamos visualmente en un **heatmap**.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/heatmap.png)
+
+## 🌍 Ventas por Región  
+- Vemos una **posible correlación positiva** entre las **ventas en diferentes regiones** (NA, EU, JP, etc.) y las **ventas globales**.  
+  - Esto nos sugiere que, si un juego **vende bien en una región**, es probable que **también lo haga en otras**.
+
+---
+
+## 🎯 Puntuaciones y Ventas  
+- Observamos una **correlación positiva** entre las **puntuaciones de críticos y usuarios** y las **ventas globales**.  
+  - Sin embargo, esta relación es **más débil** que la **correlación entre las ventas regionales**.
+
+---
+
+## 📝 Correlación entre `critic_score` y `user_score`  
+- Existe una **correlación positiva** entre las puntuaciones de **críticos y usuarios**.  
+  - Esto tiene **sentido**, ya que si un juego es **bueno**, es probable que reciba **buenas reseñas** tanto por parte de **críticos** como de **usuarios**. 🎮✨
+
+## 📈 Scatterplot de las Columnas de Interés  
+
+El gráfico de Puntuación de criticos y usuarios muestra un comportamiento esperado, a medidad que aumentan las puntuaciónes de los criticos aumentan las ventas globales:
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/scatterplot1.png)
+
+
+El siguiente gráfico de dispersión muestra una **relación interesante** entre la **puntuación de los usuarios** y las **ventas globales** de los videojuegos.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/scatterplot2.png)
+
+- Observamos que **algunos juegos con puntuaciones cercanas a 0** tienen **ventas sorprendentemente altas**.  
+
+---
+
+### 🔍 **Posibles Explicaciones**  
+- **Falta de reseñas**: Puede tratarse de juegos recién lanzados o de nicho, con poca retroalimentación de usuarios.  
+- **Estrategias de marketing agresivas**: Campañas publicitarias que impulsan las ventas iniciales, independientemente de la calidad del juego.  
+- **Errores en la recopilación de datos**: Problemas en la recopilación o interpretación de la información.
+
+---
+
+### 🧠 **Importancia de un Análisis Más Profundo**  
+Es fundamental considerar otros factores, como:
+- **Género del juego**  
+- **Plataforma de lanzamiento**  
+- **Momento del lanzamiento**  
+
+# ❓ ¿Podemos Predecir las Ventas Globales Usando Puntuaciones de Críticos y Usuarios?
+
+El **valor de R² promedio** obtenido nos indica que nuestras **variables predictoras** (puntuaciones de críticos y usuarios) explican apenas un **5.44%** de la **variabilidad en las ventas globales**. 📉  
+
+---
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/crossvalidate.png)
+
+
+## 🔍 **Interpretación**  
+- Esto sugiere que las **puntuaciones de críticos y usuarios**, por sí solas, **no son suficientes** para explicar de manera significativa las **ventas globales** de los videojuegos.  
+- Es probable que **otras variables importantes** influyan de manera significativa en el éxito comercial, como:
+
+  - **Género del juego** 🎮  
+  - **Plataforma de lanzamiento** 🕹️  
+  - **Presupuesto de marketing** 📢  
+  - **Fecha de lanzamiento** 🗓️
+
+---
+
+### 🧠 **Conclusión**  
+Aunque las puntuaciones pueden tener cierta **influencia**, es claro que no son los únicos factores que determinan las ventas globales. Un análisis más profundo que considere estas **variables adicionales** podría mejorar la capacidad de **predicción** del modelo y brindar una comprensión más completa de los **factores que impulsan las ventas** en la industria de los videojuegos. 🚀📊  
+
+
+---
+
+### 🔄 **Visión Completa del Éxito Comercial de los Videojuegos**  
+Al comparar estos datos con **otras fuentes de información** y analizar las **tendencias a lo largo del tiempo**, podemos obtener una **perspectiva más completa** sobre los factores que **influyen en el éxito comercial** de los videojuegos. 🚀  
+
 
 **Resultados:**
-- Juegos como **Grand Theft Auto V** y **Super Mario Galaxy** tienen calificaciones excelentes de críticos (97) y usuarios, con ventas que superan los 10 millones de copias, mostrando una relación positiva en estos casos.
-- Mientras que juegos como **Ride to Hell** y **Ninjabread Man** tienen puntuaciones extremadamente bajas (entre 13 y 20), y las ventas son mínimas, mostrando que en estos casos las malas críticas sí afectan las ventas.
+
 
 ## ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho?
 Se filtran las columnas relevantes para el análisis, seleccionando el año de lanzamiento y las ventas globales. Luego, se ordenan los datos de forma descendente utilizando `sort_values()`. Finalmente, se muestran los 10 años con mayores ventas.
