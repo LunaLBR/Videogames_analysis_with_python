@@ -250,7 +250,7 @@ Una vez que los datos estén procesados y limpios, será posible realizar un an�
 
 ### Pasos:
 1. Definir n (tamaño de la muestra) y R (número de repeticiones).
-![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos1.png)
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos.png)
    
 3. Crear histogramas para visualizar la distribución de las medias y medianas calculadas.
    
@@ -267,6 +267,49 @@ En el análisis de bootstrap, los errores estándar obtenidos son 0.0119 para la
   
   ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos5.png)
       
+# 📊 Métrica o estadística a utilizar (Pruebas A/B)
+
+¿Hay juegos con buenas calificaciones que venden poco? 🎮 ¿Y juegos mal calificados que venden mucho? 🤔
+
+¿Existen diferencias significativas en las ventas entre videojuegos con puntuaciones altas y bajas de críticos o usuarios? 📈
+
+## 📏 Métrica
+La métrica que utilizaremos para comparar el comportamiento de los grupos será la **media de ventas globales**. Esto nos permitirá evaluar si existe una diferencia significativa en las ventas entre los videojuegos con puntuaciones altas y bajas.
+
+## 🔍 Test de hipótesis
+
+### 💡 Hipótesis:
+- **Hipótesis nula (H0)**: No hay diferencia significativa en las ventas medias entre videojuegos con puntuaciones altas y videojuegos con puntuaciones bajas.
+- **Hipótesis alternativa (H1)**: Hay una diferencia significativa en las ventas medias entre videojuegos con puntuaciones altas y videojuegos con puntuaciones bajas.
+
+### 📋 Pasos:
+1. Clasificar los juegos en grupos según las puntuaciones de críticos. 🏅
+
+  ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/h1.png)
+
+
+3. Combinación de grupos y realización del test de permutación. 🔄
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/h2.png)
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/h3.png)
+
+La diferencia observada en medias es de **1.1277**, lo que indica que, en promedio, los videojuegos con puntuaciones críticas altas (mayores a 80) venden **1.1277 millones de unidades** más que aquellos con puntuaciones críticas bajas (80 o menos). Además, el valor p de **0.0000** sugiere una evidencia muy fuerte en contra de la hipótesis nula, lo que implica que hay una diferencia significativa en las ventas entre estos dos grupos. Los resultados respaldan la idea de que los juegos con mejores críticas tienden a vender más que los mal calificados. 📊✨
+
+## 🤖 Rendimiento de un modelo de machine learning
+Intenta predecir el éxito o fracaso de un videojuego en función de características específicas, como las puntuaciones de críticos y usuarios.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/h4.png)
+
+
+### 📊 Interpretación de los Valores
+- **✅ Verdaderos Positivos (VP)**: 743. Estos son los casos en los que el modelo predijo correctamente que un videojuego sería un "Éxito". Es decir, 743 videojuegos que realmente fueron exitosos y que el modelo también clasificó como tales.
+  
+- **✅ Verdaderos Negativos (VN)**: 1317. Estos son los casos en los que el modelo predijo correctamente que un videojuego sería un "Fracaso". Así que 1317 videojuegos que realmente fracasaron y que el modelo también clasificó como fracasados.
+  
+- **❌ Falsos Positivos (FP)**: 408. Estos son los casos en los que el modelo predijo incorrectamente que un videojuego sería un "Éxito", pero en realidad fue un "Fracaso". Es decir, 408 videojuegos que el modelo clasificó como éxitos, pero no lo fueron.
+  
+- **❌ Falsos Negativos (FN)**: 918. Estos son los casos en los que el modelo predijo incorrectamente que un videojuego sería un "Fracaso", pero en realidad fue un "Éxito". Es decir, 918 videojuegos que el modelo clasificó como fracasos, pero sí tuvieron éxito.
 
 ## 9. Conclusión
 En este análisis, hemos examinado diversos aspectos clave del mercado de videojuegos, revelando patrones sobre las plataformas, géneros y su relación con las ventas y calificaciones. El procesamiento de datos es esencial para comprender las tendencias en la industria de los videojuegos y su relación con las ventas globales. 
