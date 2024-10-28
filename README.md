@@ -187,15 +187,7 @@ El siguiente gráfico de dispersión muestra una **relación interesante** entre
 ### 🔍 **Posibles Explicaciones**  
 - **Falta de reseñas**: Puede tratarse de juegos recién lanzados o de nicho, con poca retroalimentación de usuarios.  
 - **Estrategias de marketing agresivas**: Campañas publicitarias que impulsan las ventas iniciales, independientemente de la calidad del juego.  
-- **Errores en la recopilación de datos**: Problemas en la recopilación o interpretación de la información.
 
----
-
-### 🧠 **Importancia de un Análisis Más Profundo**  
-Es fundamental considerar otros factores, como:
-- **Género del juego**  
-- **Plataforma de lanzamiento**  
-- **Momento del lanzamiento**  
 
 # ❓ ¿Podemos Predecir las Ventas Globales Usando Puntuaciones de Críticos y Usuarios?
 
@@ -220,7 +212,25 @@ El **valor de R² promedio** obtenido nos indica que nuestras **variables predic
 ### 🧠 **Resultados**  
 Aunque las puntuaciones pueden tener cierta **influencia**, es claro que no son los únicos factores que determinan las ventas globales. Un análisis más profundo que considere estas **variables adicionales** podría mejorar la capacidad de **predicción** del modelo y brindar una comprensión más completa de los **factores que impulsan las ventas** en la industria de los videojuegos. 🚀📊  
 
-## ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho?
+# Análisis de Clusters de Videojuegos: Relación entre Puntuaciones y Ventas Globales
+
+El clustering permite identificar patrones en las puntuaciones de los críticos y usuarios en relación con las ventas. Esto ayuda a entender qué elementos pueden influir en el éxito comercial de un videojuego.
+
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/clusters.png)
+
+## Posibles Interpretaciones de los Clusters
+
+Basándonos en la distribución de los puntos en el gráfico, podemos hacer algunas inferencias sobre lo que cada cluster podría representar:
+
+- **Cluster 1 (color morado)**: Videojuegos independientes o de nicho. Estos juegos suelen tener puntuaciones de crítica más bajas y ventas globales más modestas. Podrían ser juegos indie, juegos con temáticas muy específicas o juegos que no han recibido una gran promoción. Otra opción son videojuegos que se volvieron populares debido al marketing.
+
+- **Cluster 2 (color verde)**: Videojuegos de gran éxito comercial. Estos juegos suelen tener puntuaciones de crítica moderadas a altas y ventas globales muy altas. Son los juegos que todos conocemos y que suelen estar en las listas de los más vendidos.
+
+- **Cluster 3 (color amarillo)**: Videojuegos con alta puntuación de crítica pero bajas ventas. Este cluster podría incluir juegos que han sido muy bien recibidos por la crítica, pero que no han logrado alcanzar un gran éxito comercial. Podrían ser juegos con mecánicas de juego innovadoras o con temáticas muy específicas que no han conectado con el público general.
+
+
+
+# ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho?
 Se filtran las columnas relevantes para el análisis, seleccionando el año de lanzamiento y las ventas globales. Luego, se ordenan los datos de forma descendente utilizando `sort_values()`. Finalmente, se muestran los 10 años con mayores ventas.
 
 ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/18.png)
