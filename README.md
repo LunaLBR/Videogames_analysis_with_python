@@ -30,6 +30,7 @@ En un mercado en constante crecimiento, se espera que las ventas de un videojueg
 - ¿Qué géneros de videojuegos son los que mayor se venden? 🏆
 - ¿Cuál es la distribución de los videojuegos por género y plataforma? 📊
 - ¿Qué relación existe entre las puntuaciones de críticos y usuarios y las ventas globales? ⭐
+- ¿Podemos usar la puntuación de críticos y usuarios para predecir las ventas globales?
 - ¿Existen diferencias significativas en las ventas según el año de lanzamiento de los videojuegos? 📅
 - ¿Hay juegos con buenas calificaciones que venden poco? ¿Y juegos mal calificados que venden mucho? 🤔
 
@@ -242,6 +243,30 @@ Se filtran las columnas relevantes para el análisis, seleccionando el año de l
 
 ## 8. Consideraciones futuras
 Una vez que los datos estén procesados y limpios, será posible realizar un análisis más profundo. Por ejemplo, se podrían explorar correlaciones avanzadas entre las puntuaciones de los críticos y las ventas globales. Además, este proyecto podría servir como base para crear modelos predictivos que anticipen el éxito comercial de futuros videojuegos basándose en sus características clave. También podría ser interesante analizar el impacto de factores externos como campañas de marketing o lanzamientos simultáneos de consolas. 📈
+
+# 8.1. Implementación
+
+## Bootstrap (validación de sesgos)
+
+### Pasos:
+1. Definir n (tamaño de la muestra) y R (número de repeticiones).
+![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos1.png)
+   
+3. Crear histogramas para visualizar la distribución de las medias y medianas calculadas.
+   
+   ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos2.png)
+
+4. Calcular el error estándar de las medias y medianas.
+
+   ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos3.png)
+
+
+En el análisis de bootstrap, los errores estándar obtenidos son 0.0119 para la media y 0.0034 para la mediana. Estos valores bajos indican que las estimaciones de la media y la mediana son precisas, con poca variabilidad en torno a los valores originales. La menor variabilidad en la mediana sugiere que es una medida más robusta y menos afectada por valores extremos, lo que refuerza su confiabilidad para representar el centro de los datos.
+
+   ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos4.png)
+  
+  ![1](https://github.com/LunaLBR/Videogames_analysis_with_python/blob/main/imagenes/sesgos5.png)
+      
 
 ## 9. Conclusión
 En este análisis, hemos examinado diversos aspectos clave del mercado de videojuegos, revelando patrones sobre las plataformas, géneros y su relación con las ventas y calificaciones. El procesamiento de datos es esencial para comprender las tendencias en la industria de los videojuegos y su relación con las ventas globales. 
